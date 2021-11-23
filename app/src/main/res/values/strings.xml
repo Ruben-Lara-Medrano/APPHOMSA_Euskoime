@@ -51,7 +51,7 @@
     <!--   TODO: Menu Names     -->
 
     <!--     General Menu names     -->
-    <string name="home">HOME</string>
+    <string name="home">Inicio</string>
     <string name="search">Buscar</string>
     <string name="all_categories">Categorias</string>
     <string name="add_missing_place">quitar</string>

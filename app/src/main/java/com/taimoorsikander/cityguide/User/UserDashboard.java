@@ -148,11 +148,10 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
 
         ArrayList<CategoriesHelperClass> categoriesHelperClasses = new ArrayList<>();
-        categoriesHelperClasses.add(new CategoriesHelperClass(gradient1, R.drawable.logo_homsa3, "Education"));
-        categoriesHelperClasses.add(new CategoriesHelperClass(gradient2, R.drawable.logo_homsa3, "HOSPITAL"));
-        categoriesHelperClasses.add(new CategoriesHelperClass(gradient3, R.drawable.logo_homsa3, "Restaurant"));
-        categoriesHelperClasses.add(new CategoriesHelperClass(gradient4, R.drawable.logo_homsa3, "Shopping"));
-        categoriesHelperClasses.add(new CategoriesHelperClass(gradient1, R.drawable.logo_homsa3, "Transport"));
+        categoriesHelperClasses.add(new CategoriesHelperClass(gradient1, R.drawable.logo_homsa3, "Partes"));
+        categoriesHelperClasses.add(new CategoriesHelperClass(gradient2, R.drawable.logo_homsa3, "Ausencias"));
+        categoriesHelperClasses.add(new CategoriesHelperClass(gradient3, R.drawable.logo_homsa3, "asistencias"));
+        categoriesHelperClasses.add(new CategoriesHelperClass(gradient4, R.drawable.logo_homsa3, "gastos"));
 
 
         categoriesRecycler.setHasFixedSize(true);

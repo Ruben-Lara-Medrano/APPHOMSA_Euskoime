@@ -21,7 +21,7 @@
     </group>
 
 
-    <item android:title="Profile">
+    <item android:title="Perfil">
         <menu>
 
             <group android:checkableBehavior="single">
@@ -42,7 +42,7 @@
         </menu>
     </item>
 
-    <item android:title="Categories">
+    <item android:title="Categorias">
         <menu>
 
             <group android:checkableBehavior="single">
@@ -62,12 +62,13 @@
                     android:id="@+id/nav_shop"
                     android:title="@string/ausencias"
                     android:icon="@drawable/ausencias_24"/>
+
             </group>
 
         </menu>
     </item>
 
-    <item android:title="Share">
+    <item android:title="Compartir">
         <menu>
 
             <group android:checkableBehavior="none">
