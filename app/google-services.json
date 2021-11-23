@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "624770790111",
+    "firebase_url": "https://city-guide-272f5.firebaseio.com",
+    "project_id": "city-guide-272f5",
+    "storage_bucket": "city-guide-272f5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624770790111:android:707d6866917c47fbf8af6a",
+        "android_client_info": {
+          "package_name": "com.taimoorsikander.cityguide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "624770790111-4l8jj0euv99g4m95m5e00dek47rhevv1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANJylabbKIakn5ZJZVnWH1gdg2EZxGgzg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "624770790111-4l8jj0euv99g4m95m5e00dek47rhevv1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
