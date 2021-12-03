@@ -22,9 +22,9 @@
     <string name="fourth_slide_desc">We will handle everything for you. As you have the app in your pocket then you don\'t have to worry about anything.  </string>
 
     <!--Buttons-->
-    <string name="skip_btn">Skip</string>
-    <string name="next_btn">Next</string>
-    <string name="let_get_started">Lets Get Started</string>
+    <string name="skip_btn">Saltar</string>
+    <string name="next_btn">Siguiente</string>
+    <string name="let_get_started">Empezemos!!</string>
 
 
     <!--   TODO:Strings for Dashboard    -->
@@ -34,18 +34,16 @@
     <string name="gastos">Gastos</string>
     <string name="ausencias">Ausencias</string>
     <string name="parteHoras">Partes de horas</string>
-    <string name="banks">Banks</string>
-    <string name="airports">Airports</string>
-    <string name="education">Education</string>
-    <string name="hospitals">Hospitals</string>
+    <string name="banks">Mecanica</string>
+    <string name="airports">Clientes</string>
 
     <!--  Titles and Descriptions  -->
     <string name="UltimosProyectos">Ultimos proyectos</string>
-    <string name="featured_locations_description">All the locations that are featured and have the top demand in town!</string>
+    <string name="featured_locations_description">Todos los proyectos mostrados son de prueba</string>
     <string name="mas_utilizados">Mas vistos</string>
     <string name="ultimos_partes">Ultimos partes</string>
-    <string name="view_all">View All</string>
-    <string name="search_text">Search...</string>
+    <string name="view_all">Ver todos</string>
+    <string name="search_text">Buscar...</string>
 
 
     <!--   TODO: Menu Names     -->
@@ -62,47 +60,47 @@
     <string name="rate_us">Reporta</string>
 
     <!--     All Categories Menu names     -->
-    <string name="expand_all">Expand All</string>
-    <string name="car_rent">Car Rent</string>
-    <string name="all_shops">All Shops</string>
+    <string name="expand_all">Expandir</string>
+    <string name="car_rent">Mecanica y obras relacionadas</string>
+    <string name="all_shops">Todas las ventas/presupuestos</string>
 
 
     <!-- TODO: Retailer Panel Strings -->
 
     <!--  General Strings  -->
-    <string name="sign_up">Sign Up</string>
-    <string name="retailer_heading">Grow\nYour Business</string>
-    <string name="retailer_tag_line">We will help you to grow your business using online services!</string>
-    <string name="create_account">Create\nAccount</string>
-    <string name="how_we_work">How we work?</string>
-    <string name="remember_me">Remember Me</string>
-    <string name="forget_password">Forget Password</string>
+    <string name="sign_up">Registrarse</string>
+    <string name="retailer_heading">¿Quieres conocernos? Entra!!.</string>
+    <string name="retailer_tag_line">Te ayudamos a hacer crecer tu negocio.</string>
+    <string name="create_account">Crear cuenta</string>
+    <string name="how_we_work">Conocenos!!</string>
+    <string name="remember_me">Recuerdame</string>
+    <string name="forget_password">Contraseña Olvidada</string>
 
     <!--  Field Strings  -->
-    <string name="enter_full_name">Full Name</string>
-    <string name="enter_username">Username</string>
+    <string name="enter_full_name">Nombre completo</string>
+    <string name="enter_username">Nombre Usuario</string>
     <string name="enter_email">Email</string>
-    <string name="enter_phone_number">Phone Number</string>
-    <string name="enter_password">Password</string>
+    <string name="enter_phone_number">Telefono</string>
+    <string name="enter_password">Contraseña</string>
 
 
     <!--   OTP Screen -->
-    <string name="otp_code_text">Co\nde</string>
-    <string name="otp_verification_text">Verification</string>
-    <string name="otp_description_text">Enter one time password sent on\n+923332225522</string>
+    <string name="otp_code_text">Codigo</string>
+    <string name="otp_verification_text">Verificacion</string>
+    <string name="otp_description_text">Introduce el codigo que te hemos enviado al telfono movil.</string>
 
 
     <!--   Reset Password -->
-    <string name="new_credentials">New\nCredentials</string>
-    <string name="new_credentials_detail">Your identity has been verified!\nSet your new password</string>
-    <string name="forget_password_detail">Provide your account\'s email for which you want to reset your password!</string>
-    <string name="password_updated">Password\nUpdated</string>
-    <string name="password_updated_success_message">your password has been updated!</string>
-    <string name="make_selection">Make\nSelection</string>
-    <string name="make_selection_detail">Select which contact detail should we use to reset your password?</string>
-    <string name="via_sms">via sms:</string>
+    <string name="new_credentials">Nuevas credenciasles</string>
+    <string name="new_credentials_detail">Identidad verificada con exito. Actualizando credenciales de acceso.</string>
+    <string name="forget_password_detail">Introduce tu correo de acceso a la plataforma para poder enviarte las credenciasles nuevas.</string>
+    <string name="password_updated">Contraseña actualizada</string>
+    <string name="password_updated_success_message">Tu contraseña ha sido actualizada con exito</string>
+    <string name="make_selection">Quitar</string>
+    <string name="make_selection_detail">¿Como quieres que te enviemos la nueva contraseña?</string>
+    <string name="via_sms">Via sms:</string>
     <string name="via_mail">via mail:</string>
-    <string name="verify_code">Verify Code</string>
+    <string name="verify_code">Codigo de verificacion</string>
     <string name="todo">TODO</string>
 
 </resources>

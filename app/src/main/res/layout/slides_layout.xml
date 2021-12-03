@@ -26,7 +26,8 @@
         android:layout_marginRight="178dp"
         android:fontFamily="@font/brandon_grotesque_black"
         android:gravity="center"
-        android:text="TextView"
+        android:text="Bienvenid@ a Homsa
+Empezemos!!!"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.471"
@@ -43,7 +44,9 @@
         android:layout_marginRight="176dp"
         android:gravity="center"
         android:padding="10dp"
-        android:text="@string/first_slide_desc"
+        android:text="En esta aplicacion vas a poder gestionar cosas como: tus trabajos, tus partes de horas, tus gastos, etc....
+En estas pequeñas diapositivas haremos una pequeña guia de como funciona.
+Bienvenid@ al futuro!!!!!"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
