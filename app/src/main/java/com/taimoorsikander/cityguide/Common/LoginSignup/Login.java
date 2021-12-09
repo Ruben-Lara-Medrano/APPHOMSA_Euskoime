@@ -1,18 +1,19 @@
 package com.taimoorsikander.cityguide.Common.LoginSignup;
 
+import android.app.ActivityOptions;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
-
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -26,6 +27,8 @@ import com.taimoorsikander.cityguide.Databases.SessionManager;
 import com.taimoorsikander.cityguide.HelperClasses.CheckInternet;
 import com.taimoorsikander.cityguide.LocationOwner.RetailerDashboard;
 import com.taimoorsikander.cityguide.R;
+import com.taimoorsikander.cityguide.User.AllCategories;
+import com.taimoorsikander.cityguide.User.UserDashboard;
 
 import java.util.HashMap;
 
@@ -36,6 +39,7 @@ public class Login extends AppCompatActivity {
     TextInputLayout phoneNumber, password;
     RelativeLayout progressbar;
     CheckBox rememberMe;
+    Button login, registrarse;
     TextInputEditText phoneNumberEditText, passwordEditText;
 
     @Override
@@ -53,7 +57,19 @@ public class Login extends AppCompatActivity {
         phoneNumberEditText = findViewById(R.id.login_phone_number_editText);
         passwordEditText = findViewById(R.id.login_password_editText);
 
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                logearte(v);
+            }
+        });
 
+        registrarse.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
         //Check weather phone number and password is already saved in Shared Preferences or not
         SessionManager sessionManager = new SessionManager(Login.this, SessionManager.SESSION_REMEMMBERME);
         if (sessionManager.checkRememberMe()) {
@@ -78,7 +94,6 @@ public class Login extends AppCompatActivity {
             showCustomDialog();
             return;
         }
-
 
         //validate phone Number and Password
         if (!validateFields()) {
@@ -224,8 +239,15 @@ public class Login extends AppCompatActivity {
     public void callForgetPassword(View view) {
         startActivity(new Intent(getApplicationContext(), ForgetPassword.class));
     }
-
-
+    public void logearte(View view) {
+        //todo:Hacer la comprobacion con la base de datos de los datos del cliente y el intent consencuente al dashboard
+        Intent i = new Intent(getApplicationContext(), UserDashboard.class);
+        startActivity(i);
+    }
+    public void createAccount(View view){
+        Intent i = new Intent(getApplicationContext(), SignUp.class);
+        startActivity(i);
+    }
     public void callSignUpFromLogin(View view) {
         startActivity(new Intent(getApplicationContext(), SignUp.class));
         finish();

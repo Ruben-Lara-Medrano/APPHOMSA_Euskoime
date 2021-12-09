@@ -121,7 +121,7 @@
 
 
             <Button
-                android:id="@+id/letTheUserLogIn"
+                android:id="@+id/login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/forget_password_block"
@@ -134,7 +134,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/letTheUserLogIn"
+                android:layout_below="@id/login"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:background="#00000000"
