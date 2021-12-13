@@ -67,7 +67,7 @@ public class Login extends AppCompatActivity {
         registrarse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                NuevoRegistro(v);
             }
         });
         //Check weather phone number and password is already saved in Shared Preferences or not
@@ -151,11 +151,11 @@ public class Login extends AppCompatActivity {
 
                     } else {
                         progressbar.setVisibility(View.GONE);
-                        password.setError("Password does not match!");
+                        password.setError("Las contraseñas no coinciden");
                     }
                 } else {
                     progressbar.setVisibility(View.GONE);
-                    phoneNumber.setError("No such user exist!");
+                    phoneNumber.setError("No existe el usuario.");
                 }
             }
 
@@ -211,15 +211,15 @@ public class Login extends AppCompatActivity {
         String checkspaces = "\\A\\w{1,20}\\z";
 
         if (_phoneNumber.isEmpty()) {
-            phoneNumber.setError("Phone number can not be empty");
+            phoneNumber.setError("El numero de telefono no puede estar vacio");
             phoneNumber.requestFocus();
             return false;
         } else if (_password.isEmpty()) {
-            password.setError("Password can not be empty");
+            password.setError("La contraseña no puede estar vacia");
             password.requestFocus();
             return false;
         } else if (!_phoneNumber.matches(checkspaces)) {
-            phoneNumber.setError("No White spaces are allowed!");
+            phoneNumber.setError("No se permite espacios en blanco");
             return false;
         } else {
             phoneNumber.setError(null);
@@ -251,5 +251,10 @@ public class Login extends AppCompatActivity {
     public void callSignUpFromLogin(View view) {
         startActivity(new Intent(getApplicationContext(), SignUp.class));
         finish();
+    }
+    public void NuevoRegistro(View v){
+        //todo:Hacer el insert en la base de datos y despues validar enviando un correo de inicio de sesion
+        Intent i= new Intent(getApplicationContext(), SignUp.class);
+        startActivity(i);
     }
 }
