@@ -1,35 +1,28 @@
 <resources>
-    <!--  Todo: Basic + Splash Screen Strings  -->
 
-    <string name="app_name">City Guide</string>
+    <string name="app_name">AppErp</string>
     <string name="logo_nombre">HOM.S.A.</string>
     <string name="slogan_name">Ingenieria industrial</string>
     <string name="powered_by">Powered By HOM.S.A. Rubén Lara</string>
 
 
-    <!--  Todo: Strings for On Boarding Screen  -->
-
-    <!--Titles-->
     <string name="first_slide_title">Search Your Location</string>
     <string name="second_slide_title">Make A Call</string>
     <string name="third_slide_title">Add Missing Place</string>
     <string name="fourth_slide_title">Sit Back And Enjoy</string>
 
-    <!--Descriptions-->
     <string name="first_slide_desc">You can search any place nearby or with-in the specified city. We will display specific or all related shops to match your search. </string>
     <string name="second_slide_desc">We provide almost all the numbers of all departments and shops registered with us. You can perform bookings as well.</string>
     <string name="third_slide_desc">If you have a shop or somethings and want to be a part of our growing industry then add your place by follwing simple steps.</string>
     <string name="fourth_slide_desc">We will handle everything for you. As you have the app in your pocket then you don\'t have to worry about anything.  </string>
 
-    <!--Buttons-->
     <string name="skip_btn">Saltar</string>
     <string name="next_btn">Siguiente</string>
     <string name="let_get_started">Empezemos!!</string>
 
 
-    <!--   TODO:Strings for Dashboard    -->
 
-    <!--  Categories  -->
+    <!--  Categorias  -->
     <string name="asistencia">Asistencias</string>
     <string name="gastos">Gastos</string>
     <string name="ausencias">Ausencias</string>
@@ -37,7 +30,7 @@
     <string name="banks">Mecanica</string>
     <string name="airports">Clientes</string>
 
-    <!--  Titles and Descriptions  -->
+    <!--  Titulos y descripciones  -->
     <string name="UltimosProyectos">Ultimos proyectos</string>
     <string name="featured_locations_description">Todos los proyectos mostrados son de prueba</string>
     <string name="mas_utilizados">Mas vistos</string>
@@ -46,9 +39,7 @@
     <string name="search_text">Buscar...</string>
 
 
-    <!--   TODO: Menu Names     -->
-
-    <!--     General Menu names     -->
+    <!--    Nombres de los menus    -->
     <string name="home">Inicio</string>
     <string name="search">Buscar</string>
     <string name="all_categories">Categorias</string>
@@ -59,15 +50,13 @@
     <string name="share">Compartir</string>
     <string name="rate_us">Reporta</string>
 
-    <!--     All Categories Menu names     -->
+    <!--     Nombres de todas las categorias     -->
     <string name="expand_all">Expandir</string>
     <string name="car_rent">Mecanica y obras relacionadas</string>
     <string name="all_shops">Todas las ventas/presupuestos</string>
 
 
-    <!-- TODO: Retailer Panel Strings -->
-
-    <!--  General Strings  -->
+    <!--  Strings varios  -->
     <string name="sign_up">Registrarse</string>
     <string name="retailer_heading">¿Quieres conocernos? Entra!!.</string>
     <string name="retailer_tag_line">Te ayudamos a hacer crecer tu negocio.</string>
@@ -76,7 +65,7 @@
     <string name="remember_me">Recuerdame</string>
     <string name="forget_password">Contraseña Olvidada</string>
 
-    <!--  Field Strings  -->
+    <!--  Strings para los login y tal  -->
     <string name="enter_full_name">Nombre completo</string>
     <string name="enter_username">Nombre Usuario</string>
     <string name="enter_email">Email</string>
@@ -84,13 +73,13 @@
     <string name="enter_password">Contraseña</string>
 
 
-    <!--   OTP Screen -->
+    <!--   Strings perdio la cuenta -->
     <string name="otp_code_text">Codigo</string>
     <string name="otp_verification_text">Verificacion</string>
     <string name="otp_description_text">Introduce el codigo que te hemos enviado al telfono movil.</string>
 
 
-    <!--   Reset Password -->
+    <!--   Recuperar cuenta -->
     <string name="new_credentials">Nuevas credenciasles</string>
     <string name="new_credentials_detail">Identidad verificada con exito. Actualizando credenciales de acceso.</string>
     <string name="forget_password_detail">Introduce tu correo de acceso a la plataforma para poder enviarte las credenciasles nuevas.</string>

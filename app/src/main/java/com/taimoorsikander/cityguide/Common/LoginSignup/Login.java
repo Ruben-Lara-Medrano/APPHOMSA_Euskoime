@@ -48,8 +48,6 @@ public class Login extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_retailer_login);
 
-        //hooks
-
         phoneNumber = findViewById(R.id.login_phone_number);
         password = findViewById(R.id.login_password);
         progressbar = findViewById(R.id.login_progress_bar);
@@ -81,21 +79,14 @@ public class Login extends AppCompatActivity {
     }
 
 
-    /*
-    Login the
-    user in
-    app!
-     */
     public void letTheUserLoggedIn(View view) {
 
-        //Check Internet Connection
         CheckInternet checkInternet = new CheckInternet();
         if (!checkInternet.isConnected(this)) {
             showCustomDialog();
             return;
         }
 
-        //validate phone Number and Password
         if (!validateFields()) {
             return;
         }
@@ -107,32 +98,29 @@ public class Login extends AppCompatActivity {
         final String _password = password.getEditText().getText().toString().trim();
         if (_phoneNumber.charAt(0) == '0') {
             _phoneNumber = _phoneNumber.substring(1);
-        } //remove 0 at the start if entered by the user
+        }
         final String _completePhoneNumber = "+" + countryCodePicker.getFullNumber() + _phoneNumber;
 
 
-        //Check Remember Me Button to create it's session
+
         if (rememberMe.isChecked()) {
             SessionManager sessionManager = new SessionManager(Login.this, SessionManager.SESSION_REMEMMBERME);
             sessionManager.createRememberMeSession(_phoneNumber, _password);
         }
 
-        //Check weather User exists or not in database
+
         Query checkUser = FirebaseDatabase.getInstance().getReference("Users").orderByChild("phoneNo").equalTo(_completePhoneNumber);
         checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                //If Phone Number exists then get password
                 if (dataSnapshot.exists()) {
                     phoneNumber.setError(null);
                     phoneNumber.setErrorEnabled(false);
                     String systemPassword = dataSnapshot.child(_completePhoneNumber).child("password").getValue(String.class);
-                    //if password exists and matches with users password then get other fields from database
                     if (systemPassword.equals(_password)) {
                         password.setError(null);
                         password.setErrorEnabled(false);
 
-                        //Get users data from firebase database
                         String _fullname = dataSnapshot.child(_completePhoneNumber).child("fullName").getValue(String.class);
                         String _username = dataSnapshot.child(_completePhoneNumber).child("username").getValue(String.class);
                         String _email = dataSnapshot.child(_completePhoneNumber).child("email").getValue(String.class);
@@ -141,7 +129,7 @@ public class Login extends AppCompatActivity {
                         String _dateOfBirth = dataSnapshot.child(_completePhoneNumber).child("date").getValue(String.class);
                         String _gender = dataSnapshot.child(_completePhoneNumber).child("gender").getValue(String.class);
 
-                        //Create a Session
+
                         SessionManager sessionManager = new SessionManager(Login.this, SessionManager.SESSION_USERSESSION);
                         sessionManager.createLoginSession(_fullname, _username, _email, _phoneNo, _password, _dateOfBirth, _gender);
 
@@ -169,11 +157,6 @@ public class Login extends AppCompatActivity {
     }
 
 
-    /*
-    Show
-    Internet
-    Connection Dialog
-     */
     private void showCustomDialog() {
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -200,10 +183,6 @@ public class Login extends AppCompatActivity {
     }
 
 
-    /*
-    Fields
-    Validations
-     */
     private boolean validateFields() {
 
         String _phoneNumber = phoneNumber.getEditText().getText().toString().trim();
@@ -231,11 +210,6 @@ public class Login extends AppCompatActivity {
     }
 
 
-    /*
-    Function to call
-    the Forget Password
-    Screen
-     */
     public void callForgetPassword(View view) {
         startActivity(new Intent(getApplicationContext(), ForgetPassword.class));
     }
