@@ -68,7 +68,6 @@ public class Login extends AppCompatActivity {
                 NuevoRegistro(v);
             }
         });
-        //Check weather phone number and password is already saved in Shared Preferences or not
         SessionManager sessionManager = new SessionManager(Login.this, SessionManager.SESSION_REMEMMBERME);
         if (sessionManager.checkRememberMe()) {
             HashMap<String, String> rememberMeDetails = sessionManager.getRemeberMeDetailsFromSession();
@@ -93,7 +92,7 @@ public class Login extends AppCompatActivity {
         progressbar.setVisibility(View.VISIBLE);
 
 
-        //Get values from fields
+
         String _phoneNumber = phoneNumber.getEditText().getText().toString().trim();
         final String _password = password.getEditText().getText().toString().trim();
         if (_phoneNumber.charAt(0) == '0') {
