@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -18,6 +19,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.navigation.NavigationView;
+import com.taimoorsikander.cityguide.Common.LoginSignup.Login;
 import com.taimoorsikander.cityguide.Common.LoginSignup.RetailerStartUpScreen;
 import com.taimoorsikander.cityguide.Databases.SessionManager;
 import com.taimoorsikander.cityguide.HelperClasses.HomeAdapter.CategoriesAdapter;
@@ -42,7 +44,6 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
     ImageView menuIcon, loginSignUpBtn;
     LinearLayout contentView;
 
-    //Drawer Menu
     DrawerLayout drawerLayout;
     NavigationView navigationView;
 
@@ -52,35 +53,34 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_user_dashboard);
 
-        //Hooks
         featuredRecycler = findViewById(R.id.featured_recycler);
         mostViewedRecycler = findViewById(R.id.most_viewed_recycler);
         categoriesRecycler = findViewById(R.id.categories_recycler);
         menuIcon = findViewById(R.id.menu_icon);
         contentView = findViewById(R.id.content);
         loginSignUpBtn = findViewById(R.id.login_signup);
+      //  EditText Login = findViewById(R.id.nav_login);
 
-        //Menu Hooks
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigation_view);
 
-
-        //call navigation drawer
         naviagtionDrawer();
 
-
-        //Recycler Views Function Calls
         featuredRecycler();
         mostViewedRecycler();
         categoriesRecycler();
 
+        loginSignUpBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                login(v);
+            }
+        });
     }
 
 
-    //Navigation Drawer Functions
     private void naviagtionDrawer() {
 
-        //Naviagtion Drawer
         navigationView.bringToFront();
         navigationView.setNavigationItemSelectedListener(this);
         navigationView.setCheckedItem(R.id.nav_home);
@@ -101,20 +101,16 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
     private void animateNavigationDrawer() {
 
-        //Add any color or remove it to use the default one!
-        //To make it transparent use Color.Transparent in side setScrimColor();
         drawerLayout.setScrimColor(Color.TRANSPARENT);
         drawerLayout.addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
             @Override
             public void onDrawerSlide(View drawerView, float slideOffset) {
 
-                // Scale the View based on current slide offset
                 final float diffScaledOffset = slideOffset * (1 - END_SCALE);
                 final float offsetScale = 1 - diffScaledOffset;
                 contentView.setScaleX(offsetScale);
                 contentView.setScaleY(offsetScale);
 
-                // Translate the View, accounting for the scaled width
                 final float xOffset = drawerView.getWidth() * slideOffset;
                 final float xOffsetDiff = contentView.getWidth() * diffScaledOffset / 2;
                 final float xTranslation = xOffset - xOffsetDiff;
@@ -136,11 +132,8 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         return true;
     }
 
-
-    //Recycler Views Functions
     private void categoriesRecycler() {
 
-        //All Gradients
         gradient2 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xffd4cbe5, 0xffd4cbe5});
         gradient1 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xff7adccf, 0xff7adccf});
         gradient3 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xfff7c59f, 0xFFf7c59f});
@@ -194,8 +187,6 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
     }
 
-
-    //Normal Functions
     public void callRetailerScreens(View view) {
         SessionManager sessionManager = new SessionManager(UserDashboard.this, SessionManager.SESSION_USERSESSION);
         if (sessionManager.checkLogin())
@@ -213,4 +204,8 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
             super.onBackPressed();
     }
 
+    public void login(View view){
+        Intent i = new Intent(getApplicationContext(), Login.class);
+        startActivity(i);
+    }
 }
